@@ -8,7 +8,9 @@ import file2 from "../assets/file2.svg";
 import checkbox from "../assets/checkbox.svg";
 import close from "../assets/close.svg";
 import tooltip from "../assets/tooltip.svg";
+import tooltip2 from "../assets/tooltip2.svg";
 import starts from "../assets/starts.svg";
+import cursor from "../assets/cursor.svg";
 import Button from "./Button";
 
 const MainContent = () => {
@@ -190,6 +192,21 @@ const MainContent = () => {
               icon={starts}
               style="text-base font-semibold w-[240px] h-[60px] text-white bg-gradient-to-r from-[#FFBF00] to-[#FB9937]"
             />
+          </div>
+        </div>
+
+        {/* Section 4  */}
+        <div className="w-[235px] h-[120px] absolute top-[745px] right-[112px]">
+          <div className="mb-2 ml-[-4px]">
+            <img className="w-6 h-6 text-white" src={tooltip2} alt="" />
+            <img className="w-6 h-6 ml-[10px] mt-[-24px]" src={cursor} alt="" />
+          </div>
+          <div className="w-[226px] h-[94px]">
+            <p className=" text-xs font-normal bg-[#1E1E1E] text-white rounded-[20px] p-3 gap-2">
+              Deep Dive processes documents section by section for "unlimited"
+              context, enabling complete answers. Run once per chat to unlock
+              Table AI and Prompt Loops
+            </p>
           </div>
         </div>
       </div>
