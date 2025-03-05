@@ -11,7 +11,7 @@ function App() {
         </div>
 
         {/* content */}
-        <div className="bg-[#2B2B2B] w-[1116px] rounded-[16px] pt-10 px-5 pb-5 gap-20 h-[868px] border-2">
+        <div className="bg-[#2B2B2B] w-[1116px] rounded-[16px] pt-10 px-5 pb-5 h-[868px]">
           <MainContent />
         </div>
       </div>
