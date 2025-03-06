@@ -5,13 +5,12 @@ import mask3 from "../assets/mask3.svg";
 import mask4 from "../assets/mask4.svg";
 import file from "../assets/file.svg";
 import file2 from "../assets/file2.svg";
-import checkbox from "../assets/checkbox.svg";
-import close from "../assets/close.svg";
-import tooltip from "../assets/tooltip.svg";
 import tooltip2 from "../assets/tooltip2.svg";
 import starts from "../assets/starts.svg";
 import cursor from "../assets/cursor.svg";
 import Button from "./Button";
+import Files from "./reusable/Files";
+import DocPdf from "./reusable/DocPdf";
 
 const MainContent = () => {
   return (
@@ -71,108 +70,25 @@ const MainContent = () => {
         {/* Section 2 */}
         <div className="gap-5 flex flex-col">
           <div className="gap-2 grid grid-cols-2 w-[820px] mx-32">
-            <div className="h-[120px] w-[406px] rounded-[20px] p-6 gap-1.5 bg-[#242424] flex justify-center">
-              <div className="h-[66px] w-[66px] p-[15px] flex justify-center">
-                <img src={mask1} alt="" />
-              </div>
-              <div className="text-lg font-semibold h-6 text-white">
-                <h4>Drag & drop local files here,</h4>
-                <h4>or click to select</h4>
-              </div>
-            </div>
+            <Files
+              icon={mask1}
+              title="Drag & drop local files here, or click to select"
+            />
 
-            <div className="h-[120px] w-[406px] rounded-[20px] p-6 gap-1.5 bg-[#242424] flex">
-              <div className="h-[66px] w-[66px] p-[15px] flex justify-center">
-                <img src={mask2} alt="" />
-              </div>
-              <div className="gap-2 flex flex-col">
-                <p className="text-white text-lg font-semibold h-[23px]">
-                  Enter in a public URL:
-                </p>
-                <div className="flex ">
-                  <input
-                    className="h-10 w-[286px] rounded-[100px] py-1 pr-0.5 pl-5 bg-[#353535] text-sm font-normal "
-                    type="text"
-                    placeholder="https://example.com/file.pdf"
-                  />
-                  <div className="ml-[-62px] flex justify-center items-center">
-                    <Button
-                      title="Add"
-                      style="h-9 w-[60px] rounded-[20px] px-4 gap-[10px] bg-white/15"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
+            <Files icon={mask2} title="Enter in a public URL:" input="input" />
 
-            <div className="h-[120px] w-[406px] rounded-[20px] p-6 gap-1.5 bg-[#242424] flex justify-center items-center">
-              <div className="h-[66px] w-[66px] p-[15px] flex justify-center">
-                <img src={mask3} alt="" />
-              </div>
-              <div className="text-lg font-semibold h-6 text-white">
-                <h4>Add files from Dropbox</h4>
-              </div>
-            </div>
+            <Files icon={mask3} title="Add files from Dropbox" />
 
-            <div className="h-[120px] w-[406px] rounded-[20px] p-6 gap-1.5 bg-[#242424] flex justify-center items-center">
-              <div className="h-[66px] w-[66px] p-[15px] flex justify-center">
-                <img src={mask4} alt="" />
-              </div>
-              <div className="text-lg font-semibold h-6 text-white">
-                <h4>Add files from Google Drive</h4>
-              </div>
-            </div>
+            <Files icon={mask4} title="Add files from Google Drive" />
           </div>
 
           <div className="h-[62px] w-[820px] bg-[#242424] rounded-[34px] p-4 gap-1.5 flex  justify-center mx-32">
             <div className=" gap-2 flex">
               {/* pdf section  */}
-              <div className="h-[30px] w-[309px] rounded-[20px] py-[7px] pr-[7px] pl-3 gap-[14px] bg-[#2B2B2B] flex">
-                <div className="flex gap-2 justify-center items-center">
-                  <img src={file} alt="" />
-                  <p className="text-sm font-normal h-[18px] text-white">
-                    Report_file.pdf
-                  </p>
-                </div>
-
-                <div>
-                  <div className="flex gap-1.5">
-                    <img src={checkbox} alt="" />
-                    <p className="text-sm font-normal h-[18px] text-white">
-                      Force OCR
-                    </p>
-                    <img src={tooltip} alt="" />
-                  </div>
-                </div>
-
-                <div className="w-5 h-5 flex justify-center">
-                  <img className="w-2" src={close} alt="" />
-                </div>
-              </div>
+              <DocPdf icon={file} title="Report_file.pdf" style="w-[309px]" />
 
               {/* doc section  */}
-              <div className="h-[30px] w-[290px] rounded-[20px] py-[7px] pr-[7px] pl-3 gap-[14px] bg-[#2B2B2B] flex">
-                <div className="flex gap-2 justify-center items-center">
-                  <img src={file2} alt="" />
-                  <p className="text-sm font-normal h-[18px] text-white">
-                    Article.docs
-                  </p>
-                </div>
-
-                <div>
-                  <div className="flex gap-1.5">
-                    <img src={checkbox} alt="" />
-                    <p className="text-sm font-normal h-[18px] text-white">
-                      Force OCR
-                    </p>
-                    <img src={tooltip} alt="" />
-                  </div>
-                </div>
-
-                <div className="w-5 h-5 flex justify-center">
-                  <img className="w-2" src={close} alt="" />
-                </div>
-              </div>
+              <DocPdf icon={file2} title="Article.docs" style="w-[290px]" />
             </div>
           </div>
         </div>
